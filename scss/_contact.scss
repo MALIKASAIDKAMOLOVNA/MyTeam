@@ -1,0 +1,65 @@
+.contact{
+    padding-top: 241px;
+    padding-bottom: 120px;
+    background-color: $Midnight-Green;
+    background-image: url(../img/img3.svg), url(../img/img4.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px, 225px 200px;
+    background-position: top 245px left -100px, bottom right -125px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        width: 540px;
+        h1{
+            @include font(64,100,700);
+            margin-bottom: 16px;
+        }
+        >p{
+            color: $Light-Coral;
+            @include font(32,48,700);
+            margin-bottom: 32px;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            gap: 23px;
+            margin-bottom: 8px;
+            p{
+                @include font(18,28,700);
+            }
+        }
+    }
+    &__right{
+        form{
+            width: 540px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            input,textarea{
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $White;
+                padding: 16px;
+                color: rgb(81, 80, 80);
+                resize: none;
+                @include font(15,25,600);
+                &::placeholder{
+                    color: rgba($color: $White, $alpha: 0.6);
+                }
+            }
+            .site-btn{
+                background: $White;
+                color: $Deep-Jungle-Green;
+                width: 123px;
+                translate: 1s;
+            }
+            .site-btn:hover{
+                background: $Sacramento-State-Green;
+                color: $White;
+                cursor: pointer;
+            }
+        }
+    }
+}

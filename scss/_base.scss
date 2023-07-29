@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    color: $White;
+    // outline: 1px solid red;
+}
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+}
+.container{
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 10px;
+    // border: 1px solid red;
+}
+.site-btn{
+    border: 2px solid $White;
+    border-radius: 24px;
+    padding: 10px 32px;
+    @include font(18,28,600);
+    background: transparent;
+    transition: 0.3s ease all;
+}
+.site-btn:hover{
+    background: $White;
+    color: $Sacramento-State-Green;
+    cursor: pointer;
+}
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.line{
+    width: 50px;
+    height: 4px;
+}

@@ -1,0 +1,201 @@
+.about{
+    padding-top: 241px;
+    padding-bottom: 120px;
+    background: url('../img/Group\ 8\ \(4\).svg');
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: bottom right -100px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    &__left{
+        h1{
+            @include font(64,100,700);
+            width: 350px;
+            margin-right: 30px;
+
+        }
+    }
+    &__right{
+        width: 730px;
+        margin-left: auto;
+        .line{
+            background-color: $Light-Coral;
+            margin-bottom: 40px;
+        }
+        p{
+            @include font(18,28,600);
+        }
+    }
+}
+
+
+.directors{
+        padding: 140px 0;
+        background: url(../img/directors1.svg), url(../img/directors-rect.svg);
+        background-repeat: no-repeat;
+        background-size: 200px 200px, 147px 100px;
+        background-position: top left -100px, bottom right;
+        background-color: $Deep-Jungle-Green;
+        &__title{
+            text-align: center;
+            @include font (48,48,700);
+            margin-bottom: 64px;
+        }
+        &__card{
+            display: grid;
+            gap: 76px 30px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            &__item{
+                background-color: $Sacramento-State-Green;
+                padding: 35px 24px 56px 24px;
+                text-align: center;
+                transition: all 1s ease;
+                position: relative;
+                .directors__card__item__front{
+                    transition: 0.25s ease-in-out;
+                }
+                    
+                &:hover{
+                    .directors__card__item__front{
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(-50px);
+                    }
+                    .directors__hover{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translate(-50%, -50%);
+                    }
+                    .plus{
+                        transform: translateX(-50%) rotate(45deg);
+                    }
+                }
+                &__img{
+                    width: 96px;
+                    height: 96px;
+                    margin: 0 auto;
+                    margin-bottom: 16px;
+                    img{
+                        width: 96px;
+                        height: 96px;
+                        border: 2px solid #C4FFFE;
+                        border-radius: 50%;
+                    }
+                }
+                h6{
+                    color: $Rapture-Blue;
+                    @include font(18,28,700);
+                }
+                p{
+                    @include font(15,25,500);
+                    font-style: italic;
+                }
+                .plus{
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    background-color: $Light-Coral;
+                    display: grid;
+                    place-items: center;
+                    position: absolute;
+                    bottom: -28px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(0deg);
+                    transition: 0.25s ease-in-out;
+                }
+                h6{
+                    color: $Rapture-Blue;
+                    @include font(18,28,700);
+                    margin-bottom: 8px;
+                }
+                p{
+                    @include font(15,25,600);
+                    margin-bottom: 24px;
+                }
+                .icons__twoo{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 16px;
+                    .twitter{
+                        width: 24px;
+                        height: 19px;
+                    }
+                    .icons__twoo__img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .plus__twoo{
+                    width: 56px;
+                    height: 56px;
+                    background-color: $Rapture-Blue;
+                    display: grid;
+                    place-items: center;
+                    position: absolute;
+                    bottom: -28px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 50%;
+                }
+                .directors__hover{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -100%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.25s ease-in-out;
+                }
+                &:nth-child(6){
+                    padding: 40px 24px 63px 24px;
+                }
+                &:hover{
+                    .plus{
+                        background-color: $Rapture-Blue;
+                    }
+                    // &:nth-child(1){
+                    //     .directors__card__item__img{
+                    //         display: none;
+                    //     }
+                    //     .directors_list{
+                    //         display: none;
+                    //     }
+                    //     .directors_text{
+                    //         display: none;
+                    //     }
+                    // }
+                }
+            }
+        }
+}
+
+.clients{
+    padding: 140px 0;
+    background-image: url(../img/background\ img.svg);
+    background-color: $Sacramento-State-Green;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: top left;
+    &__title{
+        text-align: center;
+        @include font(48,48,700);
+        margin-bottom: 64px;
+    }
+    .footer__twoo{
+        grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        gap: 78px;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    }
+}

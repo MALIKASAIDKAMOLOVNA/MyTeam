@@ -1,0 +1,276 @@
+header{
+    background: $Midnight-Green;
+    .nav{
+        padding-top: 73px;
+        .container{
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 45%;
+        }
+        &__left{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
+            .logo{
+                width: 160px;
+                height: 40px;
+                img{
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+            ul{
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                translate: 1s;
+                a{
+                    color: $White;
+                    @include font(18,28,600)
+                }
+            }
+            ul, li, a:hover{
+                color: $Light-Coral;
+                cursor: pointer;
+            }
+           
+        }
+        &__right{
+            color: $White;
+            white-space: nowrap;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            justify-self: end;
+            align-self: flex-end;
+        }
+    }
+    .hero{
+        padding: 200px 0;
+        background-image: url(../img/Group\ 8.svg), url(../img/Group\ 7.svg);
+        background-position: top 250px left -100px, right 165px bottom -100px;
+        background-size: 200px 200px 358px 200px;
+        background-repeat: no-repeat;
+        &__left{
+            width: 635px;
+            h1{
+                width: 85%;
+                color: $White;
+                @include font(100,100,700);
+                span{
+                    color: $Light-Coral;
+                }
+            }
+        }
+        &__right{
+            width: 445px;
+            .line{
+                background: $Rapture-Blue;
+                margin-bottom: 79px;
+            }
+            p{
+                @include font(18,28,600)
+            }
+        }
+    }
+}
+
+main{
+    .task{
+        padding: 140px 0;
+        background-color: $Sacramento-State-Green;
+        background-image: url(../img/Group\ 8\ \(1\).svg);
+        background-repeat: no-repeat;
+        background-position: bottom right -100px;
+        background-size: 200px 244px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__left{
+            width: 455px;
+            .line{
+                background: $Light-Coral;
+                margin-bottom: 54px;
+            }
+            h1{
+                @include font(48,48,700);
+            }
+        }
+        &__right{
+            width: 540px;
+            padding-top: 54px;
+            &__item{
+                display: flex;
+                gap: 23px;
+                &:not(:last-child){
+                    margin-bottom: 32px;
+                }
+                &__img{
+                    width: 72px;
+                    height: 72px;
+                    img{
+                        width: 72px;
+                        height: 72px;
+                    }
+                }
+                &__text{
+                    h3{
+                        color: $Light-Coral;
+                        @include font(18,28,700);
+                        margin-bottom: 16px;
+                    }
+                    p{
+                        color: $White;
+                        opacity: .8;
+                        @include font(15,25,600);
+                    }
+                }
+            }
+        }
+    }
+    .reviews{
+        background: $Deep-Jungle-Green;
+        padding: 140px 0;
+        background-image: url(../img/reviews-bg-left\ \(1\).svg), url(../img/reviews-bg-right\ \(1\).svg);
+        background-repeat: no-repeat;
+        background-size: 147px 100px, 200px 200px;
+        background-position: top left, bottom -100px right;
+        &__title{
+            text-align: center;
+            @include font(48,48,700);
+            margin-bottom: 56px;
+            span{
+                color: $Rapture-Blue;
+            }
+        }
+        &__cards{
+            display: flex;
+            gap: 30px;
+        }
+        &__card{
+            text-align: center;
+            position: relative;
+            
+
+            &::before{
+                content: "";
+                display: block;
+                background-image: url(../img/icon-quotes.svg);
+                background-repeat: no-repeat;
+                background-size: 67px 56px;
+                width: 67px;
+                height: 56px;
+                margin: 0 auto;
+                transform: translateY(20px);
+            }
+            p{
+                position: relative;
+                @include font(15,25,600);
+                margin-bottom: 24px;
+            }
+            h3{
+                margin-bottom: 2px;
+                @include font(18,28,700);
+                color: $Rapture-Blue;
+            }
+            h6{
+                @include font(13,18,500);
+                font-style: italic;
+                margin-bottom: 32px;
+            }
+            &__img{
+                width: 62px;
+                height: 62px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+            img{
+                width: 62px;
+                height: 62px;
+                border-radius: 50%;
+                border: 2px solid #C4FFFE;
+            }
+        }
+    }
+    .ready{
+        padding: 76px 0;
+        background-image: url(../img/Group\ 8\ \(2\).svg);
+        background-color: $Light-Coral;
+        background-repeat: no-repeat;
+        background-position: left bottom -100px;
+        background-size: 200px 244px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__title{
+            color: $Sacramento-State-Green;
+            @include font(48,48,700);
+        }
+        button{
+            color: $Sacramento-State-Green;
+            border: 2px solid $Sacramento-State-Green;
+        }
+    }
+}
+
+.footer{
+    background: $Dark-Green;
+    padding: 48px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__left{
+        display: flex;
+        gap: 125px;
+        &__meny{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .logo{
+                width: 160px;
+                height: 40px;
+                a{
+                width: 160px;
+                height: 40px;
+                }
+            }
+            ul{
+                display: flex;
+                gap: 40px;
+                a{
+                    @include font(18,28,600);
+                }
+            }
+        }
+        &__call{
+            p{
+                @include font(15,25,600);
+                opacity: 0.6;
+            }
+        }
+    }
+    &__right{
+        &__icons{
+            display: flex;
+            gap: 16px;
+            justify-content: end;
+            margin-bottom: 51px;
+        }
+        p{
+            opacity: 0.6;
+            @include font(15,25,600);
+        }
+    }
+
+
+}
